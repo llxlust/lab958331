@@ -11,5 +11,7 @@ if(!PORT){
 http.createServer(function (req,res){
     res.writeHead(200,{'Content-Type':'text/html'})
     res.end('Hello World')
-}).listen(PORT)
+}).listen(PORT,()=>{
+    console.log('Server is running on port:'+PORT)
+})
 
